@@ -1,4 +1,5 @@
 def binarySearchRecursive(sequence, x, left, right):
+    try:
         if left > right:
             return False
         mid = (left+right)//2
@@ -10,6 +11,8 @@ def binarySearchRecursive(sequence, x, left, right):
             return binarySearchRecursive(sequence, x, left, mid - 1)
         elif x > sequence[mid]:
             return binarySearchRecursive(sequence, x, mid + 1, right)
+    except:
+        print('Something went wrong')
 
 
 if __name__ == "__main__":
